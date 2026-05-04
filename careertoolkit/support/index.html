@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Career Toolkit</title>
+    <title>App Support — DLB Career Toolkit</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -92,9 +92,28 @@
             margin-bottom: 0.6rem;
         }
 
+        h3 {
+            font-family: 'Source Serif 4', serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--green-dark);
+            margin: 1.25rem 0 0.4rem;
+        }
+
         section p {
             color: var(--text);
             margin-bottom: 0.75rem;
+        }
+
+        a {
+            color: var(--green-mid);
+            text-decoration: underline;
+            text-decoration-color: rgba(45, 106, 79, 0.35);
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            text-decoration-color: var(--green-mid);
         }
 
         .contact-block {
@@ -113,6 +132,20 @@
         .contact-block .org {
             font-weight: 500;
             color: var(--green-dark);
+        }
+
+        .contact-block a {
+            color: var(--green-dark);
+            font-weight: 500;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        ul li {
+            margin-bottom: 0.4rem;
         }
 
         footer {
@@ -148,62 +181,55 @@
     <div class="header">
         <div class="header-inner">
             <div class="label">Cal Poly Pomona · College of Engineering</div>
-            <h1>Privacy Policy</h1>
+            <h1>App Support</h1>
             <div class="subtitle">DLB Career Toolkit for iOS and Android</div>
-            <div class="date">Effective April 5, 2026</div>
         </div>
     </div>
 
     <main>
         <p class="intro">
-            This Privacy Policy describes how the DLB Career Toolkit app (the "App"), available on iOS and Android and developed in partnership with Cal Poly Pomona College of Engineering, collects, uses, and protects your information.
+            DLB Career Toolkit is the companion app to the Cal Poly Pomona Dean's Leadership Board (DLB) Seminar Series career-prep program. Use the contact and FAQ below for help with the app, to report a bug, or to request a feature.
         </p>
 
         <section>
-            <h2>1. Information We Collect</h2>
-            <p>The App is designed to function with minimal data collection. The App does <strong>not</strong> collect, store, or transmit any personal information, including your name, email address, phone number, or location data. All checklist data you enter is stored locally on your device and is not accessible to us or any third party.</p>
-        </section>
-
-        <section>
-            <h2>2. Data Storage</h2>
-            <p>All data created within the App is stored exclusively on your device. We do not use cloud storage, external servers, or any remote databases. If you delete the App, all associated data will be permanently removed from your device.</p>
-        </section>
-
-        <section>
-            <h2>3. Third-Party Services</h2>
-            <p>The App does not integrate with or share data with any third-party services, analytics platforms, advertising networks, or social media platforms.</p>
-        </section>
-
-        <section>
-            <h2>4. Analytics and Tracking</h2>
-            <p>The App does not use any analytics tools, tracking technologies, cookies, or similar mechanisms to monitor your usage or behavior.</p>
-        </section>
-
-        <section>
-            <h2>5. Children's Privacy</h2>
-            <p>The App does not knowingly collect personal information from children under the age of 13. Since the App does not collect any personal information from any user, it is compliant with the Children's Online Privacy Protection Act (COPPA).</p>
-        </section>
-
-        <section>
-            <h2>6. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. Any changes will be reflected within the App or on this page. We encourage you to review this policy periodically. Your continued use of the App after changes are posted constitutes your acceptance of the revised policy.</p>
-        </section>
-
-        <section>
-            <h2>7. Contact Us</h2>
-            <p>If you have any questions or concerns about this Privacy Policy, please contact:</p>
+            <h2>Contact</h2>
+            <p>For bug reports, feature requests, content questions, or anything else about the app:</p>
             <div class="contact-block">
-                <p class="org">Cal Poly Pomona College of Engineering</p>
-                <p>Dean's Leadership Board</p>
-                <p>3801 West Temple Avenue</p>
-                <p>Pomona, CA 91768</p>
+                <p class="org">Tim Kippen — App Developer</p>
+                <p><a href="mailto:apps@timkippen.com">apps@timkippen.com</a></p>
+                <p>Replies typically within a few business days.</p>
             </div>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>I lost my checklist progress. Can it be recovered?</h3>
+            <p>Checklist progress is stored locally on your device only. It is not backed up to iCloud or any server. If you uninstalled the app, switched devices, or restored from a backup that didn't include app data, the previous progress can't be recovered. Reinstalling the app starts fresh.</p>
+
+            <h3>Does the app sync between my iPhone and iPad?</h3>
+            <p>Not currently. Each device tracks its own progress independently. Cross-device sync isn't on the near-term roadmap because the app is designed to be fully offline and account-free.</p>
+
+            <h3>Can I use the app if I'm not at Cal Poly Pomona?</h3>
+            <p>Yes. The content is broadly applicable to any engineering or STEM student preparing for internships and full-time roles. The branding reflects the source material's origin, but the checklists themselves are general.</p>
+
+            <h3>Where do the checklist items come from?</h3>
+            <p>Each checklist mirrors a printed handout from the CPP DLB Seminar Series. The original PDFs are bundled in the app and viewable from the Settings &amp; About tab.</p>
+
+            <h3>How do I reset a checklist?</h3>
+            <p>Open the Settings &amp; About tab, scroll to "Reset Checklists," and tap the checklist you want to clear. This clears only the checked-item state — the content itself is unchanged.</p>
+
+            <h3>Is the app available on Android?</h3>
+            <p>Yes. The Android version is on Google Play with the same content and feature set.</p>
+
+            <h3>Does the app collect any personal information?</h3>
+            <p>No. The app stores all data locally on your device and does not transmit anything off-device. See the <a href="../">Privacy Policy</a> for details.</p>
         </section>
     </main>
 
     <footer>
         <div class="links">
-            <a href="support/">App Support</a>
+            <a href="../">Privacy Policy</a>
         </div>
         &copy; 2026 Cal Poly Pomona College of Engineering. All rights reserved.
     </footer>
