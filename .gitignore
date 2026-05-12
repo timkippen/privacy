@@ -1,0 +1,9 @@
+# macOS Finder metadata
+.DS_Store
+
+# macOS resource forks
+._*
+
+# Editor / OS junk
+Thumbs.db
+*.swp
