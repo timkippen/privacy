@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps — Tim Kippen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #3d7ab8 0%, #4e90cb 50%, #5fa5de 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #3d7ab8 0%, #4e90cb 50%, #5fa5de 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        /* The window card */
+        .app-window {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #d4d4d4;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            background: white;
+        }
+
+        .app-window:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+        }
+
+        /* Window chrome - stylized flat */
+        .window-chrome {
+            background: #ececec;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        .window-dots {
+            display: flex;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .window-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-close { background: #ff5f57; }
+        .dot-min   { background: #febc2e; }
+        .dot-max   { background: #28c840; }
+
+        .window-address {
+            flex: 1;
+            background: white;
+            border-radius: 5px;
+            padding: 5px 12px;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            font-family: 'Lato', -apple-system, sans-serif;
+            border: 1px solid #ddd;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* Inner CPP-green hero, mirroring the live careertoolkit page */
+        .window-hero {
+            background: #1a3a2a;
+            color: white;
+            padding: 2.5rem 1.5rem 2rem;
+            text-align: center;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .window-hero .label {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 0.65rem;
+        }
+
+        .window-hero h2 {
+            font-family: 'Source Serif 4', serif;
+            font-weight: 700;
+            font-size: 2rem;
+            line-height: 1.1;
+            margin-bottom: 0.6rem;
+        }
+
+        .window-hero .subtitle {
+            font-size: 0.95rem;
+            opacity: 0.75;
+            font-weight: 400;
+        }
+
+        /* Cream call-to-action band */
+        .window-cta {
+            background: #faf8f4;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .window-cta .cta-logo {
+            height: 30px;
+            width: auto;
+            opacity: 0.85;
+            flex-shrink: 0;
+        }
+
+        .window-cta .cta-action {
+            font-weight: 600;
+            color: #1a3a2a;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: gap 0.2s ease;
+        }
+
+        .app-window:hover .cta-action {
+            gap: 0.7rem;
+        }
+
+        .window-cta .arrow {
+            color: #2d6a4f;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px 40px;
+            font-size: 0.85em;
+            color: #999;
+            border-top: 1px solid #eee;
+        }
+
+        .footer a {
+            color: #555;
+            text-decoration: underline;
+            text-decoration-color: rgba(85, 85, 85, 0.3);
+            text-underline-offset: 2px;
+            transition: text-decoration-color 0.2s ease;
+        }
+
+        .footer a:hover {
+            text-decoration-color: #555;
+        }
+
+        @media (max-width: 480px) {
+            body { padding: 12px; }
+            .container { border-radius: 14px; }
+            .header { padding: 44px 24px; }
+            .header h1 { font-size: 2em; }
+            .content { padding: 28px 20px; }
+            .window-hero { padding: 2rem 1rem 1.5rem; }
+            .window-hero h2 { font-size: 1.6rem; }
+            .window-cta { padding: 1rem 1.25rem; }
+            .window-address { font-size: 11px; }
+            .footer { padding: 20px 24px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Apps</h1>
+            <p>By Tim Kippen</p>
+        </div>
+
+        <div class="content">
+            <a href="careertoolkit/" class="app-window">
+                <div class="window-chrome">
+                    <div class="window-dots">
+                        <span class="window-dot dot-close"></span>
+                        <span class="window-dot dot-min"></span>
+                        <span class="window-dot dot-max"></span>
+                    </div>
+                    <div class="window-address">apps.timkippen.com/careertoolkit/</div>
+                </div>
+                <div class="window-hero">
+                    <div class="label">Cal Poly Pomona · College of Engineering</div>
+                    <h2>DLB Career Toolkit</h2>
+                    <div class="subtitle">Career-prep companion to the EngX Seminar Series</div>
+                </div>
+                <div class="window-cta">
+                    <img src="careertoolkit/dlb-logo.png" alt="" class="cta-logo">
+                    <span class="cta-action">
+                        Open the app <span class="arrow">→</span>
+                    </span>
+                </div>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 <a href="https://timkippen.com">Tim Kippen</a>. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
